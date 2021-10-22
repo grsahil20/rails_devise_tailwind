@@ -23,13 +23,13 @@ default: &default
   port: 5433
 development:
   <<: *default
-  database: no_man_land_development
+  database: rails_devise_tailwind_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: no_man_land
+  #username: rails_devise_tailwind
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: no_man_land_test
+  database: rails_devise_tailwind_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: no_man_land_production
-  username: no_man_land
-  password: <%= ENV['NO_MAN_LAND_DATABASE_PASSWORD'] %>
+  database: rails_devise_tailwind_production
+  username: rails_devise_tailwind
+  password: <%= ENV['rails_devise_tailwind_DATABASE_PASSWORD'] %>
